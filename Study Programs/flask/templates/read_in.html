@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Textboxes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url("background.jpg"); /* Replace with your background image URL */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .form-box {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .textbox {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .textbox:focus {
+      border-color: #999;
+    }
+
+    .submit-button {
+      display: block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h2>Enter Your Marks</h2>
+      <form action = "http://192.168.76.169:5000/result" method = "POST">
+      Physics
+        <input type="number" name="phy">
+        Chemistry
+        <input type="number" name="che">
+        Mathematics
+        <input type="number" name="mat">
+        <button type="Submit" name="Submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
